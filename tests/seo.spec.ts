@@ -56,9 +56,9 @@ const DEFAULT_OG_CARD = '/images/og/default.jpg';
 // gets its own card. The starter ships only '/', '/privacy' + '/impressum', so it stays green from commit 1.
 //   - '/'          home: the default card IS the home card.
 //   - '/privacy'   legal/utility — nobody shares it with a custom preview.
-//   - '/impressum' legal/utility — same reasoning as /privacy.
 // (A noindex 404 isn't here: it's excluded from PAGES entirely, so the guard never runs on it.)
-const OWN_CARD_EXEMPT = new Set<string>(['/', '/privacy', '/impressum']);
+// This site has no '/impressum' (see tests/_helpers.ts PAGES).
+const OWN_CARD_EXEMPT = new Set<string>(['/', '/privacy']);
 
 for (const path of PAGES) {
   test(`seo — head contract on ${path}`, async ({ page }) => {

@@ -3,18 +3,18 @@
 // sync with `site:` in astro.config.mjs.
 
 export const SITE = {
-  url: 'https://example.com',          // production origin, no trailing slash
-  name: 'Example',
-  legalName: 'Example GmbH',
+  url: 'https://compare-cc-croftweaver.pages.dev', // production origin, no trailing slash
+  name: 'Fernwood Technical Translation',
+  legalName: 'Fernwood Technical Translation',
   locale: 'en',
-  themeColor: '#000000',               // matches the brand primary + manifest
+  themeColor: '#16162a',               // matches the brand primary + manifest
   // Home <title> is special-cased (NOT "Example | Example"). Keep ≤ 60 chars.
-  titleHome: 'Example: clear, keyword-tuned home page title',
-  tagline: 'One-line positioning.',
+  titleHome: 'German to English Technical Translation | Fernwood',
+  tagline: 'German to English technical translation for machine builders, by an engineer.',
   // 120–160 chars: default meta description + Organization/WebPage schema text.
   description:
-    'Example is a short, specific description of what this site offers and who ' +
-    'it is for, written plainly and within the 120 to 160 character window.',
+    'German to English technical translation for machine builders: operating manuals ' +
+    'and safety notes, by a mechanical engineer, at a fixed price agreed up front.',
 } as const;
 
 // og:locale derivation — ONE implementation shared by Base.astro (emission)
@@ -30,7 +30,7 @@ export function ogLocaleFor(lang: string): string | undefined {
 }
 
 export const COMPANY = {
-  legalName: 'Example GmbH',
+  legalName: 'Fernwood Technical Translation',
   logo: '/images/logo.png',            // resolved against SITE.url for schema
 } as const;
 
@@ -42,7 +42,26 @@ export const SAME_AS: string[] = [
 ].filter(Boolean);
 
 // Topics the site is authoritative on (schema knowsAbout).
-export const KNOWS_ABOUT: string[] = [];
+export const KNOWS_ABOUT: string[] = [
+  'Technical translation from German into English',
+  'Operating manuals',
+  'Maintenance instructions',
+  'Technical specifications',
+  'Safety notes',
+  'Machine building',
+];
+
+// Contact data — the only contact facts the site may show (BRIEF.md). No street
+// address: the service is online.
+export const CONTACT = {
+  person: 'Jo Fernwood',
+  email: 'jo@example.com',
+  phone: '+1 555 0142',
+  phoneHref: 'tel:+15550142',
+} as const;
+
+// Shown in every page footer (BRIEF.md; tests/brief.spec.ts checks it).
+export const FICTION_NOTICE = 'A fictional business, built for a comparison. Not a real service.';
 
 // Plausible (cookieless; scriptHost is https://plausible.io for the paid cloud
 // version, or your own self-hosted instance). Fire only on the production

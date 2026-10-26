@@ -1,19 +1,88 @@
 ---
-// Minimal home page so the test harness is green the moment you copy the overlay.
-// Replace the copy with the real positioning from CONTENT_GUIDE.md; keep one <h1>,
-// the description 120–160 chars, and the copy within the tone rules.
+// Home: what the service is, for whom, how it differs (POSITIONING.md), and the one
+// call to action. Facts come only from BRIEF.md; there is no proof yet, so the page
+// explains the mechanism instead of quoting anyone.
 import Base from '../layouts/Base.astro';
-import EmailLink from '../components/EmailLink.astro';
 import { SITE } from '../config';
 ---
 <Base title={SITE.name}>
-  <section class="wrap">
-    <h1>{SITE.name}</h1>
-    <p>
-      This starter page exists so the accessibility, SEO, navigation, image, tone
-      and email checks pass from the first commit. Replace it with your real home
-      page, then build the rest of the site test first.
+  <section class="wrap hero">
+    <h1>German to English technical translation for machine builders</h1>
+    <p class="lead">
+      Operating manuals, maintenance instructions, specifications and safety notes,
+      translated from German into English by a mechanical engineer, in your own
+      terminology, at a fixed price agreed before work starts.
     </p>
-    <p>Contact: <EmailLink address="hello@example.com" subject="Questions" /></p>
+    <p class="cta">
+      <a class="button" href="/contact">Ask for a fixed price</a>
+      <a href="/services">See what is translated and how</a>
+    </p>
+  </section>
+
+  <section class="wrap">
+    <h2>Who this is for</h2>
+    <p>
+      You write or manage technical documentation at a small or mid-size machine
+      builder in Germany. Your machines sell abroad, and every one of them needs an
+      English manual. Fernwood Technical Translation does one thing: technical
+      translation for machine builders, from German into English.
+    </p>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>What you might use today</h2>
+      <ul class="cards">
+        <li>
+          <h3>Machine translation</h3>
+          <p>Fast, but one of your own engineers then reviews every page and corrects the technical terms.</p>
+        </li>
+        <li>
+          <h3>A large agency</h3>
+          <p>Many translators across many subjects. The person on your next manual may not be the one on your last.</p>
+        </li>
+        <li>
+          <h3>A generalist freelancer</h3>
+          <p>Translates many kinds of text. Machine documentation is one subject among several.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>What is different here</h2>
+    <ul class="cards">
+      <li>
+        <h3>An engineer who translates</h3>
+        <p>Jo Fernwood trained as a mechanical engineer, so the translation starts from how the machine works.</p>
+      </li>
+      <li>
+        <h3>Only machine documentation</h3>
+        <p>Operating manuals, maintenance instructions, specifications and safety notes. No other kind of text.</p>
+      </li>
+      <li>
+        <h3>Your terminology, kept</h3>
+        <p>You send a terminology list, or Jo builds one with you on the first job. It is used on every later job.</p>
+      </li>
+      <li>
+        <h3>A fixed price first</h3>
+        <p>The work is priced per word. You agree one fixed price before any work starts.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>What that gives you</h2>
+      <ul>
+        <li>Fewer review rounds for your own engineers, because the translator already understands the machine.</li>
+        <li>The same English word for the same part, in every manual you publish.</li>
+        <li>A known translation cost before the job begins.</li>
+      </ul>
+      <p class="cta">
+        <a class="button" href="/contact">Ask for a fixed price</a>
+        <a href="/about">About Jo Fernwood</a>
+      </p>
+    </div>
   </section>
 </Base>

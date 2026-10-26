@@ -1,0 +1,107 @@
+---
+// Services: the four document types, the terminology list, the pricing and the steps
+// of a job. Facts only from BRIEF.md: no turnaround times, file formats or prices.
+import Base from '../layouts/Base.astro';
+import { SITE, CONTACT } from '../config';
+
+const site = Astro.site ?? new URL(SITE.url);
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${site.origin}/services#service`,
+  name: 'German to English technical translation for machine builders',
+  serviceType: 'Technical translation',
+  provider: { '@id': `${site.origin}/#organization` },
+  areaServed: 'DE',
+  availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${site.origin}/contact`, availableLanguage: 'en' },
+  description:
+    'Translation of operating manuals, maintenance instructions, specifications and safety notes from German into English, in the client’s own terminology, priced per word with a fixed price agreed before work starts.',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Document types',
+    itemListElement: ['Operating manuals', 'Maintenance instructions', 'Specifications', 'Safety notes'].map((name) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: `${name}, German to English` },
+    })),
+  },
+};
+---
+<Base
+  title="Manual translation services"
+  description="German to English translation of operating manuals, maintenance instructions, specifications and safety notes, in your terminology, at a fixed price."
+  image="/images/og/services.jpg"
+  schemas={[serviceSchema]}>
+  <section class="wrap hero">
+    <h1>Manual translation, German to English</h1>
+    <p class="lead">
+      Four kinds of machine documentation, translated from German into English by a
+      mechanical engineer. Nothing else is translated here, which is the point.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <h2>What is translated</h2>
+    <ul class="cards">
+      <li>
+        <h3>Operating manuals</h3>
+        <p>The manual that ships with the machine and tells the operator how to run it.</p>
+      </li>
+      <li>
+        <h3>Maintenance instructions</h3>
+        <p>Inspection, servicing and repair steps for the people who keep the machine running.</p>
+      </li>
+      <li>
+        <h3>Specifications</h3>
+        <p>Technical data and requirements, where one wrong term changes what is being specified.</p>
+      </li>
+      <li>
+        <h3>Safety notes</h3>
+        <p>Warnings and safety instructions, where the wording has to be exact.</p>
+      </li>
+    </ul>
+    <p>
+      All four are translated in one direction only: from German into English.
+    </p>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Your terminology list</h2>
+      <p>
+        Every job uses your own terms. If you already have a terminology list, send it
+        with the first document. If you do not, Jo builds one with you on the first
+        job.
+      </p>
+      <p>
+        The list is kept and used again on every later job. A part that is called one
+        thing in your first English manual is called the same thing in the next one,
+        and in the one after that.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>How the price works</h2>
+    <p>
+      Work is priced per word. Before anything starts, you get one fixed price for the
+      job, and you agree to it. The price you agreed is the price you pay.
+    </p>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>How a job runs</h2>
+      <ol class="steps">
+        <li>You email the German document to {CONTACT.person}, with your terminology list if you have one.</li>
+        <li>You get a fixed price for the job, based on the word count.</li>
+        <li>You agree the price. Only then does the translation start.</li>
+        <li>On a first job without a list, Jo builds the terminology list with you as part of the work.</li>
+        <li>You receive the English translation. Your terminology list is kept for the next job.</li>
+      </ol>
+      <p class="cta">
+        <a class="button" href="/contact">Ask for a fixed price</a>
+        <a href="/about">Who translates your documents</a>
+      </p>
+    </div>
+  </section>
+</Base>

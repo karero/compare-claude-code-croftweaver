@@ -4,4 +4,4 @@ Allow: /
 Disallow: /go/
 
 # Set to the real production domain before launch.
-Sitemap: https://example.com/sitemap-index.xml
+Sitemap: https://compare-cc-croftweaver.pages.dev/sitemap-index.xml

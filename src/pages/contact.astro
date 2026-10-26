@@ -1,0 +1,61 @@
+---
+// Contact: an email link (no server, no form; BRIEF.md) and the phone number. No
+// street address: the service is online.
+import Base from '../layouts/Base.astro';
+import EmailLink from '../components/EmailLink.astro';
+import { SITE, CONTACT } from '../config';
+
+const site = Astro.site ?? new URL(SITE.url);
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': `${site.origin}/contact#contactpage`,
+  url: `${site.origin}/contact`,
+  about: { '@id': `${site.origin}/#organization` },
+  mainEntity: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: CONTACT.phone,
+    availableLanguage: 'en',
+  },
+};
+---
+<Base
+  title="Ask for a fixed price"
+  description="Ask for a fixed price for your German to English manual translation: email the document to Jo Fernwood, with your terminology list if you have one."
+  image="/images/og/contact.jpg"
+  schemas={[contactSchema]}>
+  <section class="wrap hero">
+    <h1>Ask for a fixed price</h1>
+    <p class="lead">
+      Email your German document to Jo Fernwood. You get a fixed price for the English
+      translation before any work starts.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <h2>How to reach Jo</h2>
+    <ul class="contact-list">
+      <li>Email: <EmailLink address={CONTACT.email} subject="Fixed price for a translation" /></li>
+      <li>Phone: <a href={CONTACT.phoneHref}>{CONTACT.phone}</a></li>
+    </ul>
+    <p class="muted">
+      There is no office address: the service is online, and the work happens by email.
+    </p>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>What to send</h2>
+      <ul>
+        <li>The German document you need in English: an operating manual, maintenance instructions, a specification or safety notes.</li>
+        <li>Your terminology list, if you have one. If you do not, say so, and Jo builds one with you on the first job.</li>
+      </ul>
+      <p>
+        The price is worked out per word and agreed with you as one fixed price. Work
+        starts only once you have agreed to it.
+      </p>
+      <p><a href="/services">How a job runs, step by step</a></p>
+    </div>
+  </section>
+</Base>

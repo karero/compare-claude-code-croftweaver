@@ -3,10 +3,12 @@
 // CONVENTION: NO trailing slash (matches `trailingSlash: 'never'`); home stays '/'.
 export const PAGES = [
   '/',
+  '/services',
+  '/about',
+  '/contact',
   '/privacy',
-  '/impressum',  // German-market legal page; non-DE/AT/CH sites delete it (see new-website checklist)
-  // '/about',
-  // '/contact',
+  // No '/impressum': the provider is not established in Germany and has no postal
+  // address to publish (BRIEF.md). See README.md, "Decisions".
 ] as const;
 
 // a11y (and any visual check) runs in both themes; the toggle is driven by

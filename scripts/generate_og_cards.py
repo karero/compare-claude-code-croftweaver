@@ -43,13 +43,13 @@ MAX_KB = 300
 # The card is a DARK share card (light text on a deep background): it reads well in
 # every chat app regardless of whether your SITE theme is light or dark. Copy the
 # hexes from src/styles/global.css / BRAND.md and tune to taste.
-BRAND_NAME = "Your Brand"          # wordmark, top-left
-SITE_URL_LABEL = "example.com"     # footer text — your bare domain (no https://)
+BRAND_NAME = "Fernwood Technical Translation"  # wordmark, top-left
+SITE_URL_LABEL = "compare-cc-croftweaver.pages.dev"  # footer text — your bare domain (no https://)
 LOGO = None                        # faint emblem watermark, right side. Point at a
                                    # transparent PNG (e.g. ROOT/"public/logo.png");
                                    # leave None for clean text-only cards. (SVG won't
                                    # load — Pillow needs raster.)
-BG_TOP = (30, 33, 64)              # background gradient, top    (deep brand tone)
+BG_TOP = (22, 22, 42)             # background gradient, top    (deep brand tone)
 BG_BOT = (10, 11, 30)              # background gradient, bottom (near-black)
 TITLE_COL = (255, 255, 255)        # headline
 SUB_COL = (138, 160, 255)          # subtitle lines  (--accent on dark)
@@ -57,8 +57,8 @@ ACCENT = (138, 160, 255)           # accent bar      (--accent)
 FOOTER_COL = (150, 150, 170)       # footer url (muted)
 
 # Home + fallback card (this is Base.astro's default `image`). Edit for your site.
-DEFAULT_TITLE = BRAND_NAME
-DEFAULT_SUBTITLES = ["Your one-line promise —", "who it's for, in plain words."]
+DEFAULT_TITLE = "German to English technical translation"
+DEFAULT_SUBTITLES = ["For machine builders, by an engineer.", "A fixed price before work starts."]
 
 # ── PAGES ─────────────────────────────────────────────────────────────────────
 # One entry per page that should have its OWN card. The slug is the output filename
@@ -66,8 +66,9 @@ DEFAULT_SUBTITLES = ["Your one-line promise —", "who it's for, in plain words.
 # Pages you don't list here fall back to default.jpg automatically.
 # Title: short, punchy (wraps to ≤ 3 lines). Subtitles: 0–2 supporting lines.
 PAGES: list[tuple[str, str, list[str]]] = [
-    # ("about",    "What we do",  ["One clear promise —", "for the people it's for."]),
-    # ("services", "Services",    ["What you get,", "in plain words."]),
+    ("services", "Manual translation, German to English", ["Operating manuals, maintenance instructions,", "specifications and safety notes."]),
+    ("about",    "A mechanical engineer who translates", ["Jo Fernwood translates only", "machine documentation."]),
+    ("contact",  "Ask for a fixed price", ["Email the German document.", "The price is agreed before work starts."]),
 ]
 
 # ── Font resolution (cross-platform; first family with a regular+bold pair wins) ──

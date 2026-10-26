@@ -105,7 +105,7 @@ const SHOWN_AS_TEXT = ['text', 'search', 'email', 'tel', 'url', 'submit', 'butto
 // launch (a second locale's privacy page). Never to get an unfinished page green:
 // that is weakening the test (AGENTS.md §5). Fill the slot, or use the content
 // placeholder and keep the pull request a draft.
-const UNFILLED_UNTIL_LAUNCH = new Set<string>(['/privacy', '/impressum', '/manifest.webmanifest']);
+const UNFILLED_UNTIL_LAUNCH = new Set<string>([]);
 
 // A leftover is the same leftover however it is spaced. The page copy is read three
 // times (see readPage), and markup inside a slot puts spaces into some of the readings:

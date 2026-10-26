@@ -1,99 +1,95 @@
 <!--
   CONTENT_GUIDE.md — per-site voice & content guide (tone of voice + EEAT).
-  Copy this into the project root and fill every [BRACKET]. Single source of truth
-  for HOW the site says things. POSITIONING (what you offer, for whom, the market
-  category) lives in POSITIONING.md — owned by website-positioning and worked out
-  first; read it, do not restate it here. Pairs with BRAND.md (how it looks) and is
-  enforced by the tone test (tests/tone.spec.ts). Build after POSITIONING.md,
-  before any page copy — per the new-website pipeline.
+  Single source of truth for HOW the site says things. POSITIONING (what you offer,
+  for whom, the market category) lives in POSITIONING.md; read it, do not restate it
+  here. Pairs with BRAND.md (how it looks) and is enforced by the tone test
+  (tests/tone.spec.ts).
 -->
-# [Site name] — content guide
+# Fernwood Technical Translation — content guide
 
 ## Positioning (owned by website-positioning — read, do not restate)
 
 The positioning statement, target customer, market category and boilerplate live
-in **POSITIONING.md** (worked out first, via `website-positioning`). Read them from
-there; do not duplicate them here. This guide covers voice, EEAT, and the
-page-level content that hangs off that positioning.
+in **POSITIONING.md**.
 
-- **Top 3 jobs-to-be-done (for copy):** [1] · [2] · [3]
-- **Primary action we want:** [book a call / sign up / download / contact]
+- **Top 3 jobs-to-be-done (for copy):** get an English manual their engineers can sign
+  off with little rework · keep part names identical across every manual · know the
+  translation cost before the job starts
+- **Primary action we want:** email Jo with a document for a fixed-price quote
 
 ## Tone of voice
 
-Write like [persona, e.g. "a senior practitioner talking to a smart peer"]:
-[3–5 adjectives]. Proof over claims. Active voice.
+Write like an engineer explaining a job to another engineer: plain, exact, calm,
+unhurried. Short sentences. Mechanism over claims. Active voice. First person ("I")
+on the About page, where Jo speaks; elsewhere the business speaks of Jo by name.
 
-**Content language:** [English / German / other] — the hard rules below are
-lexical (specific words/mechanisms) and differ by language; fill in only the
-subsection that matches, delete the other.
+**Content language:** English.
 
 **Shared rules (enforced by the tone test — run after every copy change):**
 - **No em dashes (—).** Use a comma, period, or colon.
 - Genuine quoted customer/human voice is exempt: wrap in `<blockquote>`, `<q>`,
-  or add `data-tov-exempt`.
+  or add `data-tov-exempt`. (There are no customer quotes. Do not invent any.)
 
-**If English:**
+**English rules:**
 - Speak to the reader as "you".
-- **No contractions.** Long form: "cannot", "it is", "you are", "we are".
+- **No contractions.** Long form: "cannot", "it is", "you are".
 - **No buzzwords:** supercharge, world-class, leverage, unlock, seamless, robust,
-  cutting-edge, empower, holistic, revolutionary, synergy, next-level. [trim/add]
-
-**If German:** no direct equivalent to "no contractions" — the real formality
-lever is register, not contraction.
-- **Register:** [du / Sie] — pick one per brand and hold it for the whole
-  site; mixing du/Sie mid-page reads as a translation error, not a style
-  choice. This settles "speak to the reader as you" for German copy.
-  tone.spec.ts machine-checks the unambiguous cases (lowercase du-family
-  words vs. capitalized "Kontaktieren Sie ..."-style imperatives on one
-  page); subtler mixing still needs a human read.
-- **No buzzwords:** ganzheitlich, nahtlos, Synergie(n), Synergieeffekt(e/en),
-  bahnbrechend, revolutionär, wegweisend, erstklassig, hochmodern,
-  maßgeschneidert (Swiss "massgeschneidert" also caught — the enforced test
-  doesn't fold ß↔ss), zukunftsweisend, transformativ, unschlagbar,
-  entfesseln/entfesselt, Spitzenreiter. [trim/add]
+  cutting-edge, empower, holistic, revolutionary, synergy, next-level.
+- Name document types precisely: operating manuals, maintenance instructions,
+  specifications, safety notes. Not "content", not "assets".
 
 **Do / don't examples**
-- Do: "[on-brand sentence]"
-- Don't: "[off-brand sentence and why]"
+- Do: "You get one price per job, agreed before work starts."
+- Don't: "Affordable, transparent pricing tailored to you." (vague, and claims nothing
+  checkable)
+- Do: "Jo trained as a mechanical engineer."
+- Don't: "Trusted by leading machine builders." (no clients may be named or implied)
+
+## Facts rule
+
+Only the facts in BRIEF.md may appear: the services, Jo's training, the pricing model,
+the terminology practice, email `jo@example.com`, phone +1 555 0142. No customers,
+quotes, client names, figures, awards, certifications, years of experience, turnaround
+times or language-pair extras. Every page footer carries: "A fictional business, built
+for a comparison. Not a real service."
 
 ## EEAT signals (build in from the start)
 
-Search + AI answer engines reward Experience, Expertise, Authoritativeness,
-Trust. Ship these, not just claims:
-- **Experience / Expertise:** named authors with a real bio + `@id`; first-hand
-  detail, specifics, dates; cite primary sources inline for claim-heavy copy.
-- **Authoritativeness:** real `sameAs` profiles (LinkedIn, GitHub, register
-  entry) that resolve; corroborating external mentions; Organization schema.
-- **Trust:** legal entity / imprint page; clear contact; privacy page;
-  last-updated timestamps on substantive pages; HTTPS; no broken links.
+- **Experience / Expertise:** a named person (Jo Fernwood) with the one stated
+  credential (trained mechanical engineer); `Person` schema on the About page. No
+  invented years or employers.
+- **Authoritativeness:** no `sameAs` profiles exist yet; add them only once real ones
+  resolve.
+- **Trust:** clear contact (email and phone on every page's contact block); privacy
+  page; the fictional-business notice; a fixed price explained in plain words.
 
 ## Page inventory
 
 | Page | URL | Purpose | Primary keyword | Target `<title>` (≤60) | Status |
 |---|---|---|---|---|---|
-| Home | `/` | [why it exists] | [kw] | [title] | [ ] |
-| [About] | `/about` | … | … | … | [ ] |
+| Home | `/` | Say what it is, for whom, why it differs; route to services and contact | German to English technical translation | German to English Technical Translation \| Fernwood | [x] |
+| Services | `/services` | The four document types, the terminology list, the pricing and the steps of a job | manual translation | Manual translation services \| Fernwood Technical Translation | [x] |
+| About | `/about` | Jo: mechanical engineer who translates only machine documentation | Jo Fernwood | About Jo Fernwood \| Fernwood Technical Translation | [x] |
+| Contact | `/contact` | How to ask for a fixed price: email link, phone, what to send | fixed price | Ask for a fixed price \| Fernwood Technical Translation | [x] |
+| Privacy | `/privacy` | GDPR privacy policy | — | Privacy Policy \| Fernwood Technical Translation | [x] |
 
 ## Per-page-type copy template
 
-For each repeated page type (service, post, case study), define:
-- **Section order:** [hero → … → CTA]
-  (Home on a story-led site: the seven sections in `STORY.md`, optional `website-story`.)
-- **Hero:** H1 [reader-benefit], subhead [1 sentence], primary CTA.
-- **Body sections:** [bullets of what each must cover]
-- **Proof block:** [logos / metrics / quotes — verbatim only]
-- **CTA:** [single, repeated]
+There is no repeated page type (no blog, no collection). Each page:
+- **Section order:** hero (H1 + one-sentence intro) → body sections → contact call to
+  action.
+- **Hero:** H1 names the page's positioning term; the intro sentence says the reader
+  benefit.
+- **Proof block:** none. There is no proof yet; explain the mechanism instead.
+- **CTA:** one, repeated: "Ask for a fixed price" → `/contact`.
 
 ## New-page checklist
 
 - [ ] Positioning term threaded (positioning.spec.ts) + ToV applied; tone + positioning tests green
 - [ ] One `<h1>`; headings nest without skips
-- [ ] `<title>` 50–60 chars, `<meta description>` 120–160 (see website-seo-geo)
+- [ ] `<title>` at most 60 chars incl. the suffix, `<meta description>` 120–160
 - [ ] og/twitter inherit title/description; canonical set
 - [ ] Required JSON-LD present (WebPage + page-specific)
 - [ ] Images: WebP, sized to display, descriptive alt, lazy below the fold
-- [ ] Any linked PDF in `public/` has a descriptive doc-title set via
-      `scripts/set_pdf_title.py` — not the authoring placeholder (see website-seo-geo)
 - [ ] In sitemap; internal links clean (no `.html`)
-- [ ] EEAT: author/date where relevant; sources cited
+- [ ] The fictional-business footer notice renders (it is in `Base.astro`)

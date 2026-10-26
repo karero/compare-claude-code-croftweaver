@@ -1,21 +1,27 @@
-# Example
+# Fernwood Technical Translation
 
-> One-sentence description of what this site/company is and who it serves. Served
-> at https://example.com/llms.txt — a curated index for AI answer engines (GEO).
-> Keep it accurate, in sync with the site, and in the site's CONTENT LANGUAGE
-> (German site → German descriptions; see website-seo-geo).
+> German to English technical translation for machine builders, by a mechanical
+> engineer: operating manuals, maintenance instructions, specifications and safety
+> notes, in the client's own terminology, at a fixed price agreed before work starts.
+> Note: a fictional business, built for a comparison. Not a real service.
 
 ## Key pages
-- [Home](https://example.com/): positioning, primary action.
-- [Privacy](https://example.com/privacy): privacy policy (GDPR).
-- [Impressum](https://example.com/impressum): provider identification (§ 5 DDG, German-market sites).
+- [Home](https://compare-cc-croftweaver.pages.dev/): what the service is, who it is for, how it differs from machine translation, agencies and generalist freelancers.
+- [Services](https://compare-cc-croftweaver.pages.dev/services): the four document types, the terminology list, per-word pricing with a fixed price, and the steps of a job.
+- [About](https://compare-cc-croftweaver.pages.dev/about): Jo Fernwood, a trained mechanical engineer who translates only machine documentation.
+- [Contact](https://compare-cc-croftweaver.pages.dev/contact): how to ask for a fixed price and what to send.
+- [Privacy](https://compare-cc-croftweaver.pages.dev/privacy): privacy policy (GDPR).
 
 ## Facts
-- Legal entity: Example GmbH
-- Location: [city, country]
-- Founded: [year]
-- Contact: [email / page]
+- Translator: Jo Fernwood (sole translator), trained as a mechanical engineer
+- Language direction: German into English only
+- Documents: operating manuals, maintenance instructions, specifications, safety notes
+- Clients: technical writers and documentation managers at small and mid-size machine builders in Germany
+- Pricing: per word, one fixed price agreed before work starts
+- Terminology: the client's list, or one built with the client on the first job, kept for every later job
+- Location: online service, no street address
+- Contact: by email or phone, see https://compare-cc-croftweaver.pages.dev/contact
 
 ## Authoritative on
-- [topic 1]
-- [topic 2]
+- Technical translation from German into English
+- Machine documentation: operating manuals, maintenance instructions, specifications, safety notes

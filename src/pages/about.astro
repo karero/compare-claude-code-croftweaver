@@ -1,0 +1,73 @@
+---
+// About: Jo Fernwood, in Jo's own voice. The one credential in BRIEF.md is the
+// mechanical engineering training; add no employers, years or certifications.
+import Base from '../layouts/Base.astro';
+import { SITE, CONTACT } from '../config';
+
+const site = Astro.site ?? new URL(SITE.url);
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${site.origin}/about#jo`,
+  name: CONTACT.person,
+  jobTitle: 'Technical translator, German to English',
+  description: 'Trained mechanical engineer who translates machine documentation from German into English.',
+  knowsLanguage: ['de', 'en'],
+  knowsAbout: ['Mechanical engineering', 'Technical translation', 'Machine documentation'],
+  worksFor: { '@id': `${site.origin}/#organization` },
+  telephone: CONTACT.phone,
+  url: `${site.origin}/about`,
+};
+---
+<Base
+  title="About Jo Fernwood"
+  description="Jo Fernwood is a mechanical engineer who translates machine documentation from German into English, and only that, for machine builders in Germany."
+  image="/images/og/about.jpg"
+  schemas={[personSchema]}>
+  <section class="wrap hero">
+    <h1>A mechanical engineer who translates</h1>
+    <p class="lead">
+      I am Jo Fernwood. I trained as a mechanical engineer, and I translate technical
+      documentation from German into English for machine builders.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <h2>Why an engineer</h2>
+    <p>
+      A manual describes a machine. To translate it well, you need to understand what
+      the machine does and how its parts work together. My engineering training means I
+      read a German maintenance step the way the technician who has to carry it out
+      reads it.
+    </p>
+    <p>
+      For you, the aim is simple: fewer review rounds for your own engineers, because
+      the English text already says what the German text means.
+    </p>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>One kind of document</h2>
+      <p>
+        I translate only machine documentation: operating manuals, maintenance
+        instructions, specifications and safety notes. I do not take on marketing
+        copy, contracts or general texts.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>How I work with you</h2>
+    <ul>
+      <li>I work from your terminology list, or we build one together on the first job.</li>
+      <li>I keep that list and use it on every later job, so your parts keep their names.</li>
+      <li>I price per word and agree a fixed price with you before I start.</li>
+      <li>The work happens online, by email. There is no office to visit.</li>
+    </ul>
+    <p class="cta">
+      <a class="button" href="/contact">Ask for a fixed price</a>
+      <a href="/services">What I translate</a>
+    </p>
+  </section>
+</Base>
