@@ -60,8 +60,8 @@ for a comparison. Not a real service."
   invented years or employers.
 - **Authoritativeness:** no `sameAs` profiles exist yet; add them only once real ones
   resolve.
-- **Trust:** clear contact (email and phone on every page's contact block); privacy
-  page; the fictional-business notice; a fixed price explained in plain words.
+- **Trust:** clear contact (email and phone on the contact and privacy pages, the
+  contact page linked from every page's navigation and footer); privacy page; the fictional-business notice; a fixed price explained in plain words.
 
 ## Page inventory
 
