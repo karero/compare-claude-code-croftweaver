@@ -124,6 +124,8 @@ p, li { max-width: 40rem; }
   border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow);
 }
 .cards h3 { margin-top: 0; }
+.cards, .lead, .hero { -webkit-hyphens: manual; hyphens: manual; }
+.brand img { border-radius: 6px; box-shadow: 0 0 0 1px var(--line); }
 .cards p { margin-bottom: 0; }
 
 .band { background: var(--bg-soft); border-block: 1px solid var(--line); }
@@ -144,5 +146,5 @@ p, li { max-width: 40rem; }
 
 .site-footer p { margin: 0; max-width: none; }
 .site-footer .notice { width: 100%; font-weight: 600; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }

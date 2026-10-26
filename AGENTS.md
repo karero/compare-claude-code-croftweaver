@@ -1,22 +1,7 @@
 # AGENTS.md — rules for AI assistants (Codex, Claude Code) working on this site
 
-Website of [SITE_NAME]. Astro, static, GitHub → Cloudflare Pages.
-Live: [LIVE_URL] · Preview: [PREVIEW_URL]
-
-<!-- Scaffold note (delete after filling): new-website fills the [BRACKET] slots at
-     scaffold time — SITE_NAME, LIVE_URL, PREVIEW_URL (two-stage: main.<project>.pages.dev;
-     single-stage: "pull-request previews only, <branch>.<project>.pages.dev"; where
-     Cloudflare gave the project another address than its name, the address on its page),
-     TITLE_SUFFIX + SUFFIX_LENGTH + TITLE_MAX in §6, and keeps ONE publish-model block
-     in §2. §5 ships with single-owner defaults; website-team-setup rewrites it
-     (collaborators, rights level, merge rule, who publishes). This file stays English
-     for every owner, like the skills; the Language rule below makes the assistant talk
-     to a non-English owner in their language. A site with non-English content may use
-     its own placeholder token instead of "[MISSING: …]" (e.g. "[FEHLT: …]"): then
-     write it in §2 and §4 here, and change the grep pattern in
-     .github/workflows/ci.yml and DRAFT_TOKEN in tests/placeholders.spec.ts to the
-     same word, or the CI gate never fires and a draft branch cannot be pushed. CLAUDE.md imports this file, so Codex and Claude Code follow
-     the same rules. -->
+Website of Fernwood Technical Translation. Astro, static, GitHub → Cloudflare Pages.
+Live: https://compare-cc-croftweaver.pages.dev · Preview: https://main.compare-cc-croftweaver.pages.dev
 
 Several people and several AI assistants may work on this site, sometimes at the same
 time. The rules below stop anyone from working on a stale state or overwriting someone
@@ -149,10 +134,8 @@ applies there; instead of steps 2 to 4, only this:
   nothing until someone runs the deploy command in `PUBLISHING.md`, "Deploy by
   command".
 
-  <!-- PUBLISH MODEL: keep ONE of the two blocks below, delete the other. -->
-
   **Two-stage (main = preview, production = live).** A merge into `main` rebuilds
-  the preview [PREVIEW_URL] within a few minutes. Nothing reaches [LIVE_URL] until
+  the preview https://main.compare-cc-croftweaver.pages.dev within a few minutes. Nothing reaches https://compare-cc-croftweaver.pages.dev until
   someone runs `npm run ship`, which publishes `main` to `production` and verifies the
   live site serves the new build. Who may run it is set in §5. The assistant never
   runs `npm run ship` unasked, and always says whether an address is the preview or
@@ -163,12 +146,6 @@ applies there; instead of steps 2 to 4, only this:
   `PUBLISHING.md`, "On a shared computer"). With it on, an edit that is only in this
   folder never goes live, so whether to switch it on is the owner's call: do not switch
   it on or off unasked. `git config --local --get ship.fromGitHub` shows whether it is on.
-
-  **Single-stage (merge = online).** Cloudflare rebuilds the live site from `main`
-  after every merge (takes a few minutes). Whether the new state is there is shown by
-  [LIVE_URL]/build.txt (must show the commit id of the merge). Because a merge
-  publishes, the merge conditions above are the only gate: a red check or a leftover
-  placeholder must never be merged.
 
 - **Checks before the pull request: one command, the same for every change.** Text
   changes too: the tests catch the mistakes text edits typically make (banned
@@ -273,13 +250,13 @@ share-card list and redirects are checked by no test; work through the steps bel
 completely. Addresses always without accents or umlauts and without a trailing `/`
 (`/about-us`, not `/About-Us/`).
 
-The layout appends "[TITLE_SUFFIX]" ([SUFFIX_LENGTH] characters) to every page title
+The layout appends " | Fernwood Technical Translation" (33 characters) to every page title
 except the home page, and the total may be at most 60. So a page `title` is at most
-**[TITLE_MAX] characters**.
+**27 characters**.
 
 **New page** (e.g. `/pricing`):
 1. Create `src/pages/pricing.astro` with `Base`, like the other pages. `title` at most
-   [TITLE_MAX] characters, `description` 140 to 160 characters (test: 120 to 160).
+   27 characters, `description` 140 to 160 characters (test: 120 to 160).
 2. Link the page from somewhere, usually the navigation. A page without a link fails a
    test.
 3. Add the address to `PAGES` in `tests/_helpers.ts`.
@@ -292,7 +269,7 @@ except the home page, and the total may be at most 60. So a page `title` is at m
 **New entry in a content collection** (e.g. a project or a post):
 1. Folder or file under `src/content/<collection>/`, modelled on an existing entry.
    Mandatory fields: `src/content.config.ts`. The entry's title is the page title:
-   at most [TITLE_MAX] characters.
+   at most 27 characters.
 2. If the collection has a hand-kept order (a list in `src/config.ts` or similar):
    add the entry at the wanted position.
 3. Add the entry's address to `PAGES` in `tests/_helpers.ts`.
