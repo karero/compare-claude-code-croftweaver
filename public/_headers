@@ -12,3 +12,7 @@
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(), camera=(), microphone=()
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+
+# Added by the experimenter for the comparison, not the run's work: no indexing.
+/*
+  X-Robots-Tag: noindex
