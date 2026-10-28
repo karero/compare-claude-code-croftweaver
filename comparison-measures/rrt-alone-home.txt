@@ -1,0 +1,5 @@
+Rich Results Test, 2026-10-26 14:52:00 (CET), Google Inspection Tool smartphone
+URL: https://compare-cc-alone.pages.dev/
+Crawl allowed? Yes. Page fetch: Successful. Indexing allowed? No: 'noindex' detected in 'X-Robots-Tag' http header (the experimenter's header, on both sites).
+Result banner: "URL is not available to Google" (because of noindex).
+Detected structured data: none listed.

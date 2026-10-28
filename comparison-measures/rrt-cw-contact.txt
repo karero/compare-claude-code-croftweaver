@@ -1,0 +1,4 @@
+Rich Results Test, 2026-10-26 15:48:42 (CET), Google Inspection Tool smartphone
+URL: https://compare-cc-croftweaver.pages.dev/contact
+Crawl allowed? Yes. Page fetch: Successful. Indexing allowed? No: 'noindex' detected in 'X-Robots-Tag' http header.
+Detected structured data: Local businesses, 1 valid item (Fernwood Technical Translation), 2 non-critical issues: missing field "address" (optional), missing field "image" (optional); Organization, 1 valid item.

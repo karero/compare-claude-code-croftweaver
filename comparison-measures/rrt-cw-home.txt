@@ -1,0 +1,6 @@
+Rich Results Test, 2026-10-26 14:50:59 (CET), Google Inspection Tool smartphone
+URL: https://compare-cc-croftweaver.pages.dev/
+Crawl allowed? Yes. Page fetch: Successful. Indexing allowed? No: 'noindex' detected in 'X-Robots-Tag' http header (the experimenter's header, on both sites).
+Result banner: "URL is not available to Google" (because of noindex).
+Detected structured data: Local businesses, 1 valid item detected, non-critical issues detected; Organization, 1 valid item detected.
+Re-run 2026-10-28 09:21:22 (CET) for the item detail: Local businesses, 1 valid item, "Fernwood Technical Translation", 2 non-critical issues: missing field "address" (optional), missing field "image" (optional). The item is type Organization, id https://compare-cc-croftweaver.pages.dev/#organization: the one Organization markup on the page, which the test lists both as a local business and as an organization.

@@ -1,0 +1,4 @@
+Rich Results Test, 2026-10-26 15:48:04 (CET), Google Inspection Tool smartphone
+URL: https://compare-cc-alone.pages.dev/contact/
+Crawl allowed? Yes. Page fetch: Successful. Indexing allowed? No: 'noindex' detected in 'X-Robots-Tag' http header.
+Detected structured data: none listed.
