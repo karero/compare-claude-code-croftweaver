@@ -21,7 +21,8 @@ in **POSITIONING.md**.
 
 Write like an engineer explaining a job to another engineer: plain, exact, calm,
 unhurried. Short sentences. Mechanism over claims. Active voice. First person ("I")
-on the About page, where Jo speaks; elsewhere the business speaks of Jo by name.
+on the About and How a job works pages, where Jo speaks; elsewhere the business
+speaks of Jo by name.
 
 **Content language:** English.
 
@@ -69,6 +70,7 @@ for a comparison. Not a real service."
 |---|---|---|---|---|---|
 | Home | `/` | Say what it is, for whom, why it differs; route to services and contact | German to English technical translation | German to English Technical Translation \| Fernwood | [x] |
 | Services | `/services` | The four document types, the terminology list, the pricing and the steps of a job | manual translation | Manual translation services \| Fernwood Technical Translation | [x] |
+| How a job works | `/how-a-job-works` | The five steps of a job, in Jo's words | how a job works | How a job works \| Fernwood Technical Translation | [x] |
 | About | `/about` | Jo: mechanical engineer who translates only machine documentation | Jo Fernwood | About Jo Fernwood \| Fernwood Technical Translation | [x] |
 | Contact | `/contact` | How to ask for a fixed price: email link, phone, what to send | fixed price | Ask for a fixed price \| Fernwood Technical Translation | [x] |
 | Privacy | `/privacy` | GDPR privacy policy | — | Privacy Policy \| Fernwood Technical Translation | [x] |

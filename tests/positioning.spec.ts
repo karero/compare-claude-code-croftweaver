@@ -42,6 +42,11 @@ export const POSITIONING: Record<string, TermRule | SurfaceRule> = {
     h1: ['German to English'],
     body: ['operating manuals', 'maintenance instructions', 'specifications', 'safety notes', 'fixed price'],
   },
+  '/how-a-job-works': {
+    title: ['How a job works'],
+    desc: ['fixed price'],
+    body: ['fixed price', 'terminology list'],
+  },
   '/about': {
     title: ['Jo Fernwood'],
     desc: ['mechanical engineer'],

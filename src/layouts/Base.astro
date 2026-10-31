@@ -126,10 +126,12 @@ const CHROME: Record<string, { skip: string; privacyLabel: string; privacyHref: 
   de: { skip: 'Zum Inhalt springen', privacyLabel: 'Datenschutz', privacyHref: '/datenschutz' },
 };
 const chrome = CHROME[SITE.locale.toLowerCase().split('-')[0]] ?? CHROME.en;
-// Main navigation: the four pages of BRIEF.md. aria-current marks the page you are on.
+// Main navigation: the four pages of BRIEF.md, plus How a job works. aria-current marks
+// the page you are on.
 const NAV = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
+  { href: '/how-a-job-works', label: 'How a job works' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];

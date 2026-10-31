@@ -4,6 +4,7 @@
 export const PAGES = [
   '/',
   '/services',
+  '/how-a-job-works',
   '/about',
   '/contact',
   '/privacy',

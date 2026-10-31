@@ -67,7 +67,8 @@ DEFAULT_SUBTITLES = ["For machine builders, by an engineer.", "A fixed price bef
 # Title: short, punchy (wraps to ≤ 3 lines). Subtitles: 0–2 supporting lines.
 PAGES: list[tuple[str, str, list[str]]] = [
     ("services", "Manual translation, German to English", ["Operating manuals, maintenance instructions,", "specifications and safety notes."]),
-    ("about",    "A mechanical engineer who translates", ["Jo Fernwood translates only", "machine documentation."]),
+    ("how-a-job-works", "How a job works", ["Send the documents, get a fixed price,", "get the files back in your format."]),
+    ("about",   "A mechanical engineer who translates", ["Jo Fernwood translates only", "machine documentation."]),
     ("contact",  "Ask for a fixed price", ["Email the German document.", "The price is agreed before work starts."]),
 ]
 

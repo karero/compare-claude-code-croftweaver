@@ -8,6 +8,7 @@
 ## Key pages
 - [Home](https://compare-cc-croftweaver.pages.dev/): what the service is, who it is for, how it differs from machine translation, agencies and generalist freelancers.
 - [Services](https://compare-cc-croftweaver.pages.dev/services): the four document types, the terminology list, per-word pricing with a fixed price, and the steps of a job.
+- [How a job works](https://compare-cc-croftweaver.pages.dev/how-a-job-works): the five steps of a job, from sending the documents to getting the files back in the format they were sent.
 - [About](https://compare-cc-croftweaver.pages.dev/about): Jo Fernwood, a trained mechanical engineer who translates only machine documentation.
 - [Contact](https://compare-cc-croftweaver.pages.dev/contact): how to ask for a fixed price and what to send.
 - [Privacy](https://compare-cc-croftweaver.pages.dev/privacy): privacy policy (GDPR).

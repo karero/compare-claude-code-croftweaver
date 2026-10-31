@@ -1,0 +1,57 @@
+---
+// How a job works: the five steps of a job, in Jo's own words and voice, as Jo supplied
+// them. Pricing is per word (BRIEF.md); the file format sentence is Jo's own fact.
+// The photo was supplied as desk.jpg but shows a floor plan; the alt says what it shows.
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="How a job works"
+  description="How a translation job works, step by step: you send the documents, get a fixed price per word, agree the terminology, and get the files back in your format."
+  image="/images/og/how-a-job-works.jpg">
+  <section class="wrap hero">
+    <h1>How a job works</h1>
+    <img
+      class="photo"
+      src="/images/how-a-job-works/desk-800.webp"
+      srcset="/images/how-a-job-works/desk-480.webp 480w, /images/how-a-job-works/desk-800.webp 800w, /images/how-a-job-works/desk-1200.webp 1200w"
+      sizes="(min-width: 42.5rem) 40rem, calc(100vw - 2.5rem)"
+      width="1200"
+      height="791"
+      alt="An old blueprint of a building's main floor, with rooms labelled in Dutch"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async" />
+  </section>
+
+  <section class="wrap">
+    <ol class="steps">
+      <li>
+        <strong>You send the documents.</strong> Email me the files and, if you have one,
+        your terminology list. Tell me when you need the translation.
+      </li>
+      <li>
+        <strong>You get a fixed price.</strong> I price the job per word and send you the
+        price before any work starts. It does not change.
+      </li>
+      <li>
+        <strong>We agree the terminology.</strong> If you have no terminology list, I build
+        one with you on the first job and keep it for every later job.
+      </li>
+      <li>
+        <strong>I translate and check.</strong> I translate the documents, then check every
+        part name against your terminology list.
+      </li>
+      <li>
+        <strong>You get the files back.</strong> In the format you sent them.
+      </li>
+    </ol>
+    <p>Which documents I translate is on the page <a href="/services">my services</a>.</p>
+    <p class="cta">
+      <a class="button" href="/contact">Ask for a fixed price</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .photo { display: block; width: 40rem; margin-top: 1rem; border-radius: 6px; }
+</style>
