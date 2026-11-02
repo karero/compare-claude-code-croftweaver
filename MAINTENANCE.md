@@ -22,7 +22,7 @@ https://github.com/karero/compare-claude-code-alone/tree/maintenance.
   image with Chromium, git, Claude Code and Python's Pillow). It saw only the site at `/site`, a
   local bare repository at `/remote.git` (its `origin`), the material at `/incoming` (read-only)
   and its own configuration. No GitHub or Cloudflare credentials were inside; the one credential
-  was a Claude Code token made for the test and revoked afterwards.
+  was a Claude Code token made for this test alone.
 - The harness is the first comparison's, with these changes: `git push` allowed (to `/remote.git`),
   `git push --no-verify`, `git remote add`, `git remote set-url` and `wrangler` denied (`gh` stays
   denied), `--add-dir /incoming`, and a four-hour deadline outside the session.
@@ -111,7 +111,7 @@ Dutch", which describes it.
 - PageSpeed Insights, mobile, five runs (Lighthouse 13.6.0, 2 November): 100 / 100 / 100 / 69 in
   every run (performance, accessibility, best practices, SEO; SEO is 69 because of the `noindex`
   header). "Improve image delivery" passed in all five. Page weight 33 KiB.
-- W3C Nu HTML Checker: no errors; one note ("Section lacks heading").
+- W3C Nu HTML Checker: no errors; one warning ("Section lacks heading").
 - W3C Link Checker: one 404, the page's canonical link,
   https://compare-cc-croftweaver.pages.dev/how-a-job-works. That is the production address, where
   this page was never deployed. Run 1's canonical link answers 404 at its production address too;
